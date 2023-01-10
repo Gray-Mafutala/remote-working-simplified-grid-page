@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/src/css/_reset.css" />
+    <link rel="stylesheet" href="/src/css/_base.css" />
+
+    <!-- CND Boxicons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <!-- hamburger menu button, is displayed on the small screens -->
+      <a href="#" class="header__hamb-menu-btn"><i class="bx bx-menu"></i></a>
+
+      <!-- Site logo -->
+      <a href="#" class="header__logo-link">
+        <img
+          class="header__logo-img"
+          src="/assets/img/site-logo.svg"
+          alt="Site logo"
+        />
+      </a>
+
+      <!-- Menu links -->
+      <nav class="header__menu">
+        <menu class="header__menu-links">
+          <a href="#" class="header__menu-links__item">About</a>
+          <a
+            href="#"
+            class="header__menu-links__item header__menu-links__item--active"
+          >
+            How it Works
+          </a>
+          <a href="#" class="header__menu-links__item">Pricing</a>
+          <a href="#" class="header__menu-links__item">Case Studies</a>
+        </menu>
+        <div class="header__wrapper-login-signup-btn">
+          <a href="#" class="header__menu__login-btn">Login</a>
+          <a href="#" class="header__menu__signup-btn">Sign Up</a>
+        </div>
+      </nav>
+
+      <!-- Login button, is displayed on the small screens -->
+      <div class="header__wrapper-login-signup-icons">
+        <a href="#" class="header__menu__login-icon">
+          <i class="bx bx-log-in"></i>
+        </a>
+        <a href="#" class="header__menu__signup-icon">
+          <i class="bx bx-user-plus"></i>
+        </a>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="main__top-section">
+        <div class="main__top-section__left-content">
+          <h1 class="main__top-section__left-content__title">
+            Remote Working Simplified.
+          </h1>
+          <a href="#" class="main__top-section__left-content__btn-started">
+            Get Stated Now
+          </a>
+        </div>
+
+        <img
+          src="/assets/img/man-dressed-in-khaki.jpg"
+          class="main__top-section__right-content-img"
+          alt=""
+        />
+      </section>
+
+      <section class="main__bottom-section">
+        <img
+          src="/assets/img/woman-dressed-in-black.jpg"
+          class="main__bottom-section__img-1"
+          alt=""
+        />
+        <img
+          src="/assets/img/woman-in-blue-costume.jpg"
+          class="main__bottom-section__img2"
+          alt=""
+        />
+        <p class="main__bottom-section__how-it-works-describe">
+          You're wondering how you'll quickly transition your team to remote
+          work. People are stressed, work feels scattered, projects are
+          splipping, and it's tough to see + manage everything.
+        </p>
+      </section>
+    </main>
+    <script src="/index.js"></script>
+  </body>
+</html>
