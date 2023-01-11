@@ -1,7 +1,17 @@
+/* || Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 /* || CSS Variables */
 :root {
-    --default-background-color: #fdfdfd;
-    --default-text-color: #333;
+    --default-background-color: #fefdfe;
+    --default-text-color: #646464;
+
+    --color-gray: #b2b2b2;
+    --color-green: #4d965b;
+    --color-green-light: #72b083;
+    --color-black: #1d1d2d;
+
+    --font-inter: 'Inter', sans-serif;
 }
 
 
@@ -9,11 +19,19 @@
 body {
     color: var(--default-text-color);
     background: var(--default-background-color);
-    font-size: 16px;
+    font-size: 14px;
+    font-family: var(--font-inter);
 }
 
 img {
     width: 100%;
     height: auto;
     vertical-align: middle;
+}
+
+/* Style for icons from Boxicons */
+.bx {
+    font-size: 2rem;
+    color: var(--color-black);
+    line-height: 0;
 }

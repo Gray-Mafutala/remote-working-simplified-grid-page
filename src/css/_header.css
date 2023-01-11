@@ -1,0 +1,193 @@
+.header {
+    padding-top: 24px;
+}
+
+.header__navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+
+    --nav-height: 48px;
+    height: var(--nav-height);
+    width: 1125px;
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    white-space: nowrap;
+}
+
+
+/* hamburger menu button */
+.header__menu-btn {
+    display: none;
+}
+
+
+/* site logo */
+.header__logo-link {
+    width: 148px;
+    transition: .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.header__logo-link:hover {
+    opacity: .6;
+}
+
+.header__logo-img {
+    min-width: 135px;
+}
+
+
+/* Menu-Links container */
+.header__wrapper-menu-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 40px;
+    font-size: 16px;
+}
+
+.header__links__item {
+    transition: .3s;
+}
+
+.header__links__item:hover {
+    color: var(--color-green);
+    text-decoration: underline;
+}
+
+.header__links__item--active,
+.header__links__item--active:hover {
+    color: var(--color-green-light);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+
+/* Connections buttons */
+.header__wrapper-connections-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 12px;
+}
+
+.header__connection-btn {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 14px;
+    border: 2px solid transparent;
+
+    transition: .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.header__connection-btn--login {
+    border-color: var(--color-gray);
+}
+
+.header__connection-btn--login:is(:hover, :active, :focus) {
+    background-color: var(--color-gray);
+    color: #fff;
+}
+
+.header__connection-btn--login:is(:active, :focus) {
+    border-color: var(--default-text-color);
+}
+
+.header__connection-btn--signup {
+    color: #fff;
+    background-color: var(--color-green);
+}
+
+.header__connection-btn--signup:is(:hover, :active, :focus) {
+    border-color: var(--color-green);
+    background-color: #fff;
+    color: var(--default-text-color);
+}
+
+.header__connection-btn--signup:is(:active, :focus) {
+    color: var(--color-green);
+}
+
+
+/* Login and sign-up buttons for small screens */
+.header__wrapper-connections-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+
+    display: none;
+}
+
+/* Sign-Up icon */
+.bx-user-plus {
+    color: var(--color-green);
+}
+
+
+/*  =============== Mobile menu =============== */
+/* Container mobile menu (menu-links + wrapper of connections btn) */
+.header__wrapper-menu-links--mobile {
+    position: absolute;
+    top: var(--nav-height);
+    left: 0;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: var(--color-black);
+    row-gap: 32px;
+    padding: 20px 30px;
+
+    /* left: -100%; */
+}
+
+/* Style for connections button for mobile menu */
+
+
+/* =============== Responsive =============== */
+@media screen and (max-width: 890px) {
+
+    /* Hide Center links */
+    .header__wrapper-menu-links {
+        display: none;
+    }
+
+    /* Show the hamburger menu button */
+    .header__menu-btn {
+        display: block;
+    }
+
+}
+
+@media screen and (max-width: 468px) {
+
+    /* Hide the Wrapper of login and sign-up buttons */
+    .header__wrapper-connections-btn {
+        display: none;
+    }
+
+    /* Show the login and sign-up icons */
+    .header__wrapper-connections-icons {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 368px) {
+
+    /* Hide the login and sign-up icons*/
+    .header__wrapper-connections-icons {
+        display: none;
+    }
+
+    /* Center the site logo */
+    .header__logo-link {
+        flex: 1;
+    }
+
+    .header__navbar {
+        gap: 12px;
+    }
+}

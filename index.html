@@ -7,57 +7,69 @@
     <title>Document</title>
     <link rel="stylesheet" href="/src/css/_reset.css" />
     <link rel="stylesheet" href="/src/css/_base.css" />
-
     <!-- CND Boxicons -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
     />
-
+    <!-- Style sheets -->
     <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/src/css/_header.css" />
   </head>
   <body>
     <header class="header">
-      <!-- hamburger menu button, is displayed on the small screens -->
-      <a href="#" class="header__hamb-menu-btn"><i class="bx bx-menu"></i></a>
+      <!-- Menu Navbar -->
+      <nav class="header__navbar">
+        <!-- hamburger menu button, is displayed on the small screens -->
+        <a href="#" class="header__menu-btn">
+          <i class="bx bx-menu"></i>
+        </a>
 
-      <!-- Site logo -->
-      <a href="#" class="header__logo-link">
-        <img
-          class="header__logo-img"
-          src="/assets/img/site-logo.svg"
-          alt="Site logo"
-        />
-      </a>
+        <!-- Site logo -->
+        <a href="#" class="header__logo-link">
+          <img
+            class="header__logo-img"
+            src="/assets/img/site-logo.svg"
+            alt="Site logo"
+          />
+        </a>
 
-      <!-- Menu links -->
-      <nav class="header__menu">
-        <menu class="header__menu-links">
-          <a href="#" class="header__menu-links__item">About</a>
-          <a
-            href="#"
-            class="header__menu-links__item header__menu-links__item--active"
-          >
+        <!-- Center links -->
+        <menu class="header__wrapper-menu-links">
+          <a href="#" class="header__links__item">About</a>
+          <a href="#" class="header__links__item header__links__item--active">
             How it Works
           </a>
-          <a href="#" class="header__menu-links__item">Pricing</a>
-          <a href="#" class="header__menu-links__item">Case Studies</a>
+          <a href="#" class="header__links__item">Pricing</a>
+          <a href="#" class="header__links__item">Case Studies</a>
         </menu>
-        <div class="header__wrapper-login-signup-btn">
-          <a href="#" class="header__menu__login-btn">Login</a>
-          <a href="#" class="header__menu__signup-btn">Sign Up</a>
+
+        <!-- Login and sign-up buttons -->
+        <div class="header__wrapper-connections-btn">
+          <a
+            href="#"
+            class="header__connection-btn header__connection-btn--login"
+          >
+            Log In
+          </a>
+          <a
+            href="#"
+            class="header__connection-btn header__connection-btn--signup"
+          >
+            Sign Up
+          </a>
+        </div>
+
+        <!-- Login and sign-up buttons (icons) for small screens -->
+        <div class="header__wrapper-connections-icons">
+          <a href="#">
+            <i class="bx bx-log-in"></i>
+          </a>
+          <a href="#">
+            <i class="bx bx-user-plus"></i>
+          </a>
         </div>
       </nav>
-
-      <!-- Login button, is displayed on the small screens -->
-      <div class="header__wrapper-login-signup-icons">
-        <a href="#" class="header__menu__login-icon">
-          <i class="bx bx-log-in"></i>
-        </a>
-        <a href="#" class="header__menu__signup-icon">
-          <i class="bx bx-user-plus"></i>
-        </a>
-      </div>
     </header>
 
     <main class="main">
