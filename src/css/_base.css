@@ -12,6 +12,7 @@
     --color-black: #1d1d2d;
 
     --font-inter: 'Inter', sans-serif;
+
 }
 
 
@@ -21,6 +22,14 @@ body {
     background: var(--default-background-color);
     font-size: 14px;
     font-family: var(--font-inter);
+
+    height: 100vh;
+}
+
+/* Height of body tag when opening the mobile menu */
+.body-height-open-mobile-menu {
+    height: 100vh;
+    overflow-y: hidden;
 }
 
 img {
@@ -30,7 +39,7 @@ img {
 }
 
 /* Style for icons from Boxicons */
-.bx {
+.boxicons-styles {
     font-size: 2rem;
     color: var(--color-black);
     line-height: 0;

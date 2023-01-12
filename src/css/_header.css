@@ -1,5 +1,13 @@
 .header {
-    padding-top: 24px;
+    /* Use variables to place the mobile menu properly */
+    --padding-top-navbar: 24px;
+    --padding-bottom-navbar: 24px;
+    --header-side-padding: 20px;
+    --nav-height: 48px;
+    padding: var(--padding-top-navbar) var(--header-side-padding) var(--padding-bottom-navbar);
+
+    border-bottom: 1px solid transparent;
+    transition: padding .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .header__navbar {
@@ -8,18 +16,16 @@
     align-items: center;
     gap: 32px;
 
-    --nav-height: 48px;
     height: var(--nav-height);
     width: 1125px;
     max-width: 95%;
     margin: 0 auto;
-    padding: 0 20px;
 
     white-space: nowrap;
 }
 
 
-/* hamburger menu button */
+/* humburger menu button */
 .header__menu-btn {
     display: none;
 }
@@ -37,6 +43,7 @@
 
 .header__logo-img {
     min-width: 135px;
+    max-width: 148px;
 }
 
 
@@ -66,12 +73,12 @@
 }
 
 
-/* Connections buttons */
+/* Connection buttons */
 .header__wrapper-connections-btn {
     display: flex;
     justify-content: center;
     align-items: center;
-    column-gap: 12px;
+    gap: 12px;
 }
 
 .header__connection-btn {
@@ -79,7 +86,6 @@
     font-weight: 500;
     padding: 12px 14px;
     border: 2px solid transparent;
-
     transition: .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
@@ -112,7 +118,7 @@
 }
 
 
-/* Login and sign-up buttons for small screens */
+/* Login and sign-up buttons (icons) for small screens */
 .header__wrapper-connections-icons {
     display: flex;
     justify-content: center;
@@ -129,42 +135,87 @@
 
 
 /*  =============== Mobile menu =============== */
-/* Container mobile menu (menu-links + wrapper of connections btn) */
-.header__wrapper-menu-links--mobile {
+.header__mobile-menu {
+    /* To place the mobile menu just below the bottom border of the header */
     position: absolute;
-    top: var(--nav-height);
+    --header-height: calc(var(--padding-top-navbar) + var(--padding-bottom-navbar) + var(--nav-height));
+    top: calc(var(--header-height) + 1px);
     left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
     flex-direction: column;
-    align-items: center;
-
-    background-color: var(--color-black);
     row-gap: 32px;
-    padding: 20px 30px;
+    padding: var(--header-side-padding);
+    padding-left: calc(var(--header-side-padding) + 6px);
 
-    /* left: -100%; */
+    background-color: #fff;
+    transition: left .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+    z-index: 10;
+
+    /* To show mobile menu with animation */
+    left: -100%;
 }
 
-/* Style for connections button for mobile menu */
+.header__wrapper-menu-links--mobile {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+    row-gap: 24px;
+}
+
+.header__wrapper-connections-btn--mobile {
+    justify-content: start;
+    align-items: flex-start;
+
+    /* Will only be displayed when the connection 
+    buttons on desktop-menu are hidden (width <= 468px) */
+    display: none;
+}
+
+/* To show mobile menu with animation (left to right) */
+.header__mobile-menu--active {
+    left: 0;
+}
 
 
 /* =============== Responsive =============== */
 @media screen and (max-width: 890px) {
 
-    /* Hide Center links */
+    /* Hide menu-links (desktop) */
     .header__wrapper-menu-links {
         display: none;
     }
 
-    /* Show the hamburger menu button */
+    /* Show mobile menu links */
+    .header__wrapper-menu-links--mobile {
+        display: flex;
+    }
+
+    /* Show the humburger menu button */
     .header__menu-btn {
         display: block;
     }
 
+    /* Place the border-bottom to navbar to improve 
+    the design with the mobile menu displayed */
+    .header {
+        border-bottom-color: var(--color-gray);
+    }
+
+    /* Fix the max-width of Navbar to 100% so that the site
+    logo is vertically aligned on the left with the links item */
+    .header__navbar {
+        max-width: 100%;
+    }
 }
 
 @media screen and (max-width: 468px) {
 
-    /* Hide the Wrapper of login and sign-up buttons */
+    /* Hide the Wrapper of login and sign-up buttons (desktop) */
     .header__wrapper-connections-btn {
         display: none;
     }
@@ -173,6 +224,27 @@
     .header__wrapper-connections-icons {
         display: flex;
     }
+
+    /* Show login and sign-up buttons on mobile-menu */
+    .header__wrapper-connections-btn--mobile {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /* and increases the width of these buttons */
+    .header__connection-btn {
+        min-width: 94px;
+        flex: 1;
+        text-align: center;
+    }
+
+    /* Reduces header paddings */
+    .header {
+        --padding-top-navbar: 4px;
+        --padding-bottom-navbar: 0px;
+        --header-side-padding: 16px;
+    }
+
 }
 
 @media screen and (max-width: 368px) {
@@ -185,6 +257,7 @@
     /* Center the site logo */
     .header__logo-link {
         flex: 1;
+        text-align: center;
     }
 
     .header__navbar {

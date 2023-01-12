@@ -1,17 +1,28 @@
 const btnMenu = document.querySelector('.header__menu-btn');
+const btnMenuIcon = document.querySelector('.bx-menu');
+const mobileMenu = document.querySelector('.header__mobile-menu');
 
-const wrapperMenuLinks = document.querySelector('.header__wrapper-menu-links');
-// const menuLinksItem = document.querySelectorAll('.header__links__item');
+// Classes of humburger and close icon from Boxicons
+const classIconHumb = 'bx-menu';
+const classIconClose = 'bx-x';
 
-const wrapperConnectionsBtn = document.querySelector('.header__wrapper-connections-btn');
-const btnLogin = document.querySelector('.header__connection-btn--login');
-const btnSignup = document.querySelector('.header__connection-btn--signup');
-
-const classOfCloseIcon = 'bx-x';
-
-// Show or Hide the menu for mobile or small screen
+// Show or Hide the mobile menu
 btnMenu.addEventListener('click', () => {
-    wrapperMenuLinks.classList.toggle('header__wrapper-menu-links--mobile');
-    // Change the icon of menu-button
-    btnMenu.classList.toggle(classOfCloseIcon);
+    mobileMenu.classList.toggle('header__mobile-menu--active');
+    // Change icon menu-btn to X (close icon)
+    btnMenuIcon.classList.toggle(classIconHumb);
+    btnMenuIcon.classList.toggle(classIconClose);
+
+    // Hide body scroll-y when mobile menu displayed
+    document.body.classList.toggle('body-height-open-mobile-menu');
+});
+
+// Hide menu mobile when the width of the screen > 890px
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 890) {
+        mobileMenu.classList.remove('header__mobile-menu--active');
+        btnMenuIcon.classList.remove(classIconClose);
+        btnMenuIcon.classList.add(classIconHumb);
+        document.body.classList.remove('body-height-open-mobile-menu');
+    }
 });
