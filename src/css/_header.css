@@ -22,6 +22,7 @@
     margin: 0 auto;
 
     white-space: nowrap;
+    transition: all .5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
 
