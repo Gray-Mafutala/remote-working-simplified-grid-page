@@ -1,0 +1,126 @@
+.main {
+    width: 1125px;
+    max-width: 95%;
+    padding: 100px 0 20px;
+    margin: 0 auto;
+}
+
+
+/* Top section */
+.main__top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 32px;
+}
+
+.main__top-section__left-content {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    color: var(--color-black);
+    max-width: 610px;
+}
+
+.main__top-section__left-content__title {
+    font-size: 4.6rem;
+    font-weight: 500;
+    line-height: 1.2;
+
+    transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.main__top-section__left-content__btn-started {
+    font-size: 16px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.main__top-section__left-content__btn-started:hover {
+    color: var(--color-green);
+}
+
+.bx-arrow-back {
+    font-size: 24px;
+    line-height: 0;
+    transform: rotateY(180deg);
+    vertical-align: middle;
+    margin-left: 24px;
+}
+
+.main__section-img {
+    width: 244px;
+    /* To fluidify the change of size of the 3 images */
+    transition: .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+
+/* Bottom section */
+.main__bottom-section {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.main__bottom-section__how-it-works-describe {
+    font-size: 16px;
+    line-height: 1.4;
+    width: 244px;
+    padding: 20px 16px 0;
+}
+
+
+/* =============== Responsive =============== */
+@media screen and (max-width: 950px) {
+    .main__top-section__left-content__title {
+        font-size: 3.6rem;
+    }
+
+    .main {
+        padding: 60px 20px 20px;
+    }
+}
+
+@media screen and (max-width: 815px) {
+
+    .main__top-section {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 16px;
+    }
+
+    .main__top-section__left-content {
+        max-width: none;
+        text-align: center;
+    }
+
+    .main__top-section__left-content__title {
+        font-size: calc(3vw + 2rem);
+    }
+
+    .main__section-img {
+        width: clamp(160px, 100%, 375px);
+    }
+
+    .main__bottom-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Place the paragraph between the 2 images */
+    .main__bottom-section__img1 {
+        order: 1;
+    }
+
+    .main__bottom-section__img2 {
+        order: 3;
+    }
+
+    .main__bottom-section__how-it-works-describe {
+        width: auto;
+        max-width: 375px;
+        padding: 16px 0;
+        order: 2;
+    }
+}

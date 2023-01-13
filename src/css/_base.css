@@ -1,6 +1,7 @@
 /* || Import Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
+
 /* || CSS Variables */
 :root {
     --default-background-color: #fefdfe;
@@ -12,7 +13,6 @@
     --color-black: #1d1d2d;
 
     --font-inter: 'Inter', sans-serif;
-
 }
 
 
@@ -20,10 +20,7 @@
 body {
     color: var(--default-text-color);
     background: var(--default-background-color);
-    font-size: 14px;
     font-family: var(--font-inter);
-
-    height: 100vh;
 }
 
 /* Height of body tag when opening the mobile menu */

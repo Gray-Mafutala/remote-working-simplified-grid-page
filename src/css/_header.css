@@ -190,7 +190,7 @@
         display: none;
     }
 
-    /* Show mobile menu links */
+    /* Show mobile menu-links */
     .header__wrapper-menu-links--mobile {
         display: flex;
     }
