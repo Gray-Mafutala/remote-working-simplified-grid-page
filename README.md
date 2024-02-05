@@ -9,7 +9,7 @@
 ### Overview
 
 ### 1. Source image
-![Source image design](/readme-img/source.jpg)
+![Source image design](/readme-img/source.png)
 
 ### 2. After integration
 #### Desktop
