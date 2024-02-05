@@ -3,7 +3,7 @@
 ### 🖈 Remote Working Simplified Grid Page
 
  - **Take a look at it** [`Remote Working Simplified Grid Page`](https://gray-mafutala.github.io/remote-working-simplified-grid-page/) 👀
- - **Attribution for source image** [here](https://dribbble.com/shots/15338460-How-it-Works-Grid-Page-UI)
+ - 🔗 Attribution for source image [here](https://dribbble.com/shots/15338460-How-it-Works-Grid-Page-UI)
 ---
 
 ### Overview
